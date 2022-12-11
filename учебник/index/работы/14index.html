@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/учебник/index/работы/14style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="dropdown" aria-haspopup="true">
+        <button class="dropdown__toggle">Меню</button>
+        <div class="dropdown__drawer">
+            <ul class="menu" role="menu">
+                <li role="menuitem">
+                    <a href="/">Возможности</a>
+                </li>
+                <li role="menuitem">
+                    <a href="/">Цены</a>
+                </li>
+                <li role="menuitem">
+                    <a href="/">Поддержка</a>
+                </li>
+                <li role="menuitem">
+                    <a href="/">О нас</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <p><a href="/">Подробнее</a></p>
+
+
+    <script type="text/javascript">
+        (function () {
+            var toggle = document.getElementsByClassName('dropdown__toggle') [0];
+            var dropdown = toggle.parentElement;
+            var drawer = document.getElementsByClassName('dropdown__drawer') [0];
+            var height = drawer.scrollHeight;
+            toggle.addEventListener('click', function (e) {
+                e.preventDefault();
+                dropdown.classList.toggle('is-open');
+                if (dropdown.classList.contains('is-open')) {
+                    drawer.style.setProperty('height', height + 'px');
+                } else {
+                    drawer.style.setProperty('height', '0');
+                }
+            });
+        }())
+    </script>
+</body>
+</html>

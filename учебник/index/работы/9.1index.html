@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Kurale&family=Roboto:wght@300&display=swap"
+     rel="stylesheet">
+    <link rel="stylesheet" href="/учебник/index/работы/9.1style.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="nav-container">
+        <ul class="top-nav">
+            <li class="top-nav__home"><a href="/">Тандем</a></li>
+            <li><a href="/">Возможности</a></li>
+            <li><a href="/">Цены</a></li>
+            <li><a href="/">Поддержка</a></li>
+            <li class="top-nav__featured"><a href="/">Войти</a></li>
+        </ul>
+    </nav>
+    <div class="hero">
+        <div class="hero__inner">
+            <h2>Правильный путь к работе в команде</h2>
+            <a href="/" class="button button--cta">Начало работы</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="title-row">
+            <div class="title">
+                <h4>Работайте совместно, даже удаленно!</h4>
+                <p>Организуйте переговоры в потоки. Совместно работайте
+                    над документами в режиме реального времени. Совершайте
+                    <a href="/">видеозвонки</a>, чтобы видеть собеседника.
+                </p>
+                <a href="/" class="button">Подробнее</a>
+            </div>
+
+            <div class="title">
+                <h4>Работайте повсюду</h4>
+                <p>
+                    Тандем доступен на разных устройствах, поэтому работайте
+                    дома, в офисе и даже в дороге:
+                </p>
+                <ul class="tag-list">
+                    <li>Интернет</li>
+                    <li>IOS</li>
+                    <li>Android</li>
+                    <li>Windows phone</li>
+                </ul>
+                <a href="/" class="button">Подробнее</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="page-footer">
+        <div class="page-footer__inner">
+            Собственность &copy; 2019 Корпорация "Тандем"
+        </div>
+    </footer>
+
+ 
+    <script type="text/javascript">
+        var html = document.documentElement;
+        var script = document.createElement;
+        script.src = "fontfaceobserver.js";
+        script.async = true;
+
+        script.onload = function () {
+            var roboto = new FontFaceObserver("Roboto");
+            var kurale = new FontFaceObserver("Kurale");
+            var timeout = 2000;
+
+            Promise.all([
+                roboto.load(null, timeout),
+                kurale.load(null, timeout)
+            ]).then(function () {
+                html.classList.add("fonts-loaded");
+            }).catch(function (e) {
+                html.classList.add("fonts-failed");
+            });
+        };
+        document.head.appendChild(script);
+    </script>
+
+</body>
+</html>
